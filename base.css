@@ -1,0 +1,165 @@
+/* 全体に関する記述 */
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* ヘッダー(PCの場合) */
+@media screen and (min-width: 1019px) {
+  .header-inner{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2A7EB1;
+    height: 70px;
+  }
+  .header-left{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    margin-left: 5%;
+  }
+  .logo{
+    width: 100%;
+  }
+  .header-right{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 5%;
+  }
+  .header-right >li{
+    margin-left: 25px;
+  }
+  .header-right >li > a{
+    text-decoration: none;
+    letter-spacing: 0.075em;
+    color: #FFFFFF;
+  }
+  .nav-btn, .nav{
+    display: none;
+  }
+}
+
+/* ヘッダー(スマホの場合) */
+@media screen and (max-width: 1020px) {
+  .header-inner{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2A7EB1;
+    height: 70px;
+  }
+  .header-left{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    margin-left: 5%;
+  }
+  .logo{
+    width: 100%;
+  }
+  .header-right{
+    display: none;
+  }
+
+  .nav-btn{
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+    z-index: 50;
+  }
+  .nav-bar{
+    color: #FFFFFF;
+  }
+
+  .nav{
+    position: absolute;
+    transform: translateY(-100vw);
+    background-color: #2A7EB1;
+    width: 100%;
+    list-style: none;
+    z-index:10;
+  }
+  .nav.is-active{
+    transform: translateY(0vw);
+  }
+  .nav >li{
+    margin: 25px 25px;
+  }
+  .nav >li > a{
+    text-decoration: none;
+    letter-spacing: 0.075em;
+    color: #FFFFFF;
+  }
+}
+
+/* タイトル部分(PC版)の記述 */
+@media screen and (min-width: 1019px) {
+  .title >img{
+    width: 100%;
+  }
+}
+
+/* タイトル部分(スマホ版)の記述 */
+@media screen and (max-width: 1020px) {
+  .title >img{
+    height: 300px;
+  }
+}
+
+/* コンテンツ部分に関する記述 */
+.contents{
+  width: 90%;
+  margin: auto;
+}
+h2{
+  margin: 50px 0 10px 0;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0.025em;
+  color: #3C3C3C;
+}
+h2::before{
+  content: "";
+  padding: 0 0.5em;
+  border-left: solid 5px #2A7EB1;
+}
+.articles{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.a-article{
+  width: 360px;
+  height: 360px;
+  box-shadow: 0 0 5px #113348;
+  border-radius: 8px;
+  margin: 40px 0;
+}
+.article-photo{
+  margin: 20px 20px;
+}
+.article-photo >img{
+  width: 100%;
+}
+.article-msg{
+  margin: 0 20px 20px 20px;
+}
+
+/* フッター部分に関する記述 */
+footer{
+  background-color: #B3B3B3;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer >small{
+  color: #3C3C3C;
+}
